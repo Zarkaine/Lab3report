@@ -97,17 +97,50 @@ and all the subdirectories for files of a certain size. You need to include the 
 # option 4: mtime, ctime, and ntime
 
 1) -mtime:
+Input:
+```
+[cs15lwi23asi@ieng6-202]:written_2:533$ find -type f -mtime -1   
+```
+Ouput:
+```
+./t.txt
+./s.txt
+```
+
+-mtime means modification time. -1 means less than 1 day. +1 would return files that were last modfied longer than a day ago.
 
 2) -ctime:
+Input:
+```
+[cs15lwi23asi@ieng6-202]:written_2:549$ find -type f -ctime -4 
+```
+Ouput:
+```
+./t.txt
+./s.txt
+```
+
+-ctime means creation time. -4 means in the last four days, so +4 would return files that were last created more than 4 days ago, which would be all files besides these two
+
 
 3) -atime:
+Input:
+```
+[cs15lwi23asi@ieng6-202]:written_2:552$ find -type f -atime -4
+```
+Ouput:
+```
+./t.txt
+./s.txt
+```
+
+-atime means access time. -4 means in the last four days, so +4 would return files that were last accessed longer than 4 days ago.
 
 These options allow you to search the directory for all files based on the last modification time (mtime), creation time (ctime), or the last time the 
 file was accessed (atime). The number that comes after is the number of days. This can be useful if you want to see what files were updated or accessed recently.
 
 
 
-
 # Sources used: 
 * For options 1, 2, and 4- [linuxhandbook.com](https://linuxhandbook.com/find-command-examples/)
-* For option 3L [geeksforgeeks.org](https://www.geeksforgeeks.org/mindepth-maxdepth-linux-find-command-limiting-search-specific-directory/)
+* For option 3 [geeksforgeeks.org](https://www.geeksforgeeks.org/mindepth-maxdepth-linux-find-command-limiting-search-specific-directory/)
