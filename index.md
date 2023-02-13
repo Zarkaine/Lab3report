@@ -92,7 +92,49 @@ in written_2, there are 227 files total. But in the first two levels, there are 
 
 1) -size +100k:
 
-2) -size +100k -size -75k:
+Input:
+```
+[cs15lwi23asi@ieng6-202]:written_2:555$ find -size +100k
+```
+Ouput:
+```
+./non-fiction/OUP/Berk/CH4.txt
+./non-fiction/OUP/Berk/ch2.txt
+./travel_guides/berlitz1/WhereToFrance.txt
+./travel_guides/berlitz1/WhereToIndia.txt
+./travel_guides/berlitz1/WhereToItaly.txt
+./travel_guides/berlitz1/WhereToJapan.txt
+./travel_guides/berlitz1/WhereToMalaysia.txt
+./travel_guides/berlitz2/Canada-WhereToGo.txt
+./travel_guides/berlitz2/China-WhereToGo.txt
+./travel_guides/berlitz2/Portugal-WhereToGo.txt
+```
+
+2) -size +75k -size -100k:
+
+Input:
+```
+[cs15lwi23asi@ieng6-202]:written_2:559$ find -size +75k -size -100k
+```
+Ouput:
+```
+./non-fiction/OUP/Berk/ch1.txt
+./non-fiction/OUP/Kauffman/ch3.txt
+./non-fiction/OUP/Kauffman/ch8.txt
+./non-fiction/OUP/Kauffman/ch9.txt
+./travel_guides/berlitz1/WhatToJamaica.txt
+./travel_guides/berlitz1/WhereToDublin.txt
+./travel_guides/berlitz1/WhereToEdinburgh.txt
+./travel_guides/berlitz1/WhereToEgypt.txt
+./travel_guides/berlitz1/WhereToGreek.txt
+./travel_guides/berlitz1/WhereToIsrael.txt
+./travel_guides/berlitz1/WhereToIstanbul.txt
+./travel_guides/berlitz1/WhereToLakeDistrict.txt
+./travel_guides/berlitz1/WhereToLosAngeles.txt
+./travel_guides/berlitz1/WhereToMadrid.txt
+./travel_guides/berlitz2/Bali-WhereToGo.txt
+./travel_guides/berlitz2/Crete-WhereToGo.txt
+```
 
 This option lets you search for files based on the size. + means that you want files larger than the given size, - means smaller. 
 If you want to search in a range, you need to call -size, and do the minimum first. This is useful because you can search a directory, 
