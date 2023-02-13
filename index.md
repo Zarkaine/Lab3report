@@ -43,11 +43,46 @@ $ find -type f displays a list of all files in the current directory. This is us
 Or you can see all the files in the entire directory, including the files in the subdirectory. Calling ls -d or ls -f would only give you a list of files/directories
 that are in the current directory.
 
-# option 2: -maxdepth
+# option 2: -mindepth & -maxdepth
+
+1) -maxdepth 2
+Input:
+```
+[cs15lwi23asi@ieng6-202]:written_2:510$ find -maxdepth 2
+```
+Output:
+```
+.
+./non-fiction
+./non-fiction/OUP
+./travel_guides
+./travel_guides/berlitz1
+./travel_guides/berlitz2
+./t.txt
+./s.txt
+```
+2) -mindepth 
+Too many files, so added -type d to only show directories. Using -mindepth 2 means that it will go down 2 levels before searching.
+Input:
+```
+[cs15lwi23asi@ieng6-202]:written_2:517$ find -mindepth 2 -type d
+```
+Ouput:
+```
+./non-fiction/OUP
+./non-fiction/OUP/Abernathy
+./non-fiction/OUP/Berk
+./non-fiction/OUP/Castro
+./non-fiction/OUP/Fletcher
+./non-fiction/OUP/Kauffman
+./non-fiction/OUP/Rybczynski
+./travel_guides/berlitz1
+./travel_guides/berlitz2
+````
 
 This is useful if you only want to search a certain number of sub directories. Using find -type f would list all files in the directory, including the ones in the
 subdirectory. But that can be a lot of files, like with written_2. If you only want to see the files in the first few levels, you would use this. For instance,
-in written_2, there are 227 files total. But in the first two levels, there are only 2 files (2 of which are not in the director by default, they are files I created).
+in written_2, there are 227 files total. But in the first two levels, there are only 2 files (2 of which are not in the director by default, they are files I created). Or if you want to search in a certain range, you can use both -mindepth and -maxdepth to search a specific range of levels.
 
 # option 3: -size
 
