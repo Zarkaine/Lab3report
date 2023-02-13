@@ -1,6 +1,6 @@
 ## Lab 3: find command-line options
 
-# option 1: -type
+# Option 1: -type
 
 1) type d:
 
