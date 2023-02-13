@@ -3,6 +3,24 @@
 # option 1: -type
 
 -type d:
+'''
+[cs15lwi23asi@ieng6-202]:written_2:487$ find -type d
+'''
+Output:
+'''
+.
+./non-fiction
+./non-fiction/OUP
+./non-fiction/OUP/Abernathy
+./non-fiction/OUP/Berk
+./non-fiction/OUP/Castro
+./non-fiction/OUP/Fletcher
+./non-fiction/OUP/Kauffman
+./non-fiction/OUP/Rybczynski
+./travel_guides
+./travel_guides/berlitz1
+./travel_guides/berlitz2
+'''
 
 -type f:
 
@@ -41,4 +59,5 @@ file was accessed (atime). The number that comes after is the number of days. Th
 
 
 
-Source used: [linuxhandbook.com](https://linuxhandbook.com/find-command-examples/)
+$Source used: 
+[linuxhandbook.com](https://linuxhandbook.com/find-command-examples/)
