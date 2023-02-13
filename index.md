@@ -3,6 +3,7 @@
 # option 1: -type
 
 1) type d:
+
 Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:487$ find -type d
@@ -24,6 +25,7 @@ Output:
 ```
 
 2) type f:
+
 too many files, so changed directory first
 Input:
 ```
@@ -46,6 +48,7 @@ that are in the current directory.
 # option 2: -mindepth & -maxdepth
 
 1) -maxdepth 2
+
 Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:510$ find -maxdepth 2
@@ -62,6 +65,7 @@ Output:
 ./s.txt
 ```
 2) -mindepth 
+
 Too many files, so added -type d to only show directories. Using -mindepth 2 means that it will go down 2 levels before searching.
 Input:
 ```
@@ -97,6 +101,7 @@ and all the subdirectories for files of a certain size. You need to include the 
 # option 4: mtime, ctime, and ntime
 
 1) -mtime:
+
 Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:533$ find -type f -mtime -1   
@@ -110,6 +115,7 @@ Ouput:
 -mtime means modification time. -1 means less than 1 day. +1 would return files that were last modfied longer than a day ago.
 
 2) -ctime:
+
 Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:549$ find -type f -ctime -4 
@@ -122,8 +128,8 @@ Ouput:
 
 -ctime means creation time. -4 means in the last four days, so +4 would return files that were last created more than 4 days ago, which would be all files besides these two
 
-
 3) -atime:
+
 Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:552$ find -type f -atime -4
