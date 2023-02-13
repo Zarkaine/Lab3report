@@ -3,11 +3,11 @@
 # option 1: -type
 
 -type d:
-'''
+```
 [cs15lwi23asi@ieng6-202]:written_2:487$ find -type d
-'''
+```
 Output:
-'''
+```
 .
 ./non-fiction
 ./non-fiction/OUP
@@ -20,7 +20,7 @@ Output:
 ./travel_guides
 ./travel_guides/berlitz1
 ./travel_guides/berlitz2
-'''
+```
 
 -type f:
 
