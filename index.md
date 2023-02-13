@@ -1,4 +1,4 @@
-## find command-line options
+## Lab 3: find command-line options
 
 # option 1: -type
 
@@ -37,3 +37,8 @@ and all the subdirectories for files of a certain size. You need to include the 
 
 These options allow you to search the directory for all files based on the last modification time (mtime), creation time (ctime), or the last time the 
 file was accessed (atime). The number that comes after is the number of days. This can be useful if you want to see what files were updated or accessed recently.
+
+
+
+
+Source used: [linuxhandbook.com](https://linuxhandbook.com/find-command-examples/)
