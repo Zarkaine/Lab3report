@@ -2,7 +2,7 @@
 
 # option 1: -type
 
--type d:
+1) type d:
 Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:487$ find -type d
@@ -23,7 +23,7 @@ Output:
 ./travel_guides/berlitz2
 ```
 
--type f:
+2) type f:
 too many files, so changed directory first
 Input:
 ```
@@ -51,9 +51,9 @@ in written_2, there are 227 files total. But in the first two levels, there are 
 
 # option 3: -size
 
--size +100k:
+1) -size +100k:
 
--size +100k -size -75k:
+2) -size +100k -size -75k:
 
 This option lets you search for files based on the size. + means that you want files larger than the given size, - means smaller. 
 If you want to search in a range, you need to call -size, and do the minimum first. This is useful because you can search a directory, 
@@ -61,11 +61,11 @@ and all the subdirectories for files of a certain size. You need to include the 
 
 # option 4: mtime, ctime, and ntime
 
--mtime:
+1) -mtime:
 
--ctime:
+2) -ctime:
 
--atime:
+3) -atime:
 
 These options allow you to search the directory for all files based on the last modification time (mtime), creation time (ctime), or the last time the 
 file was accessed (atime). The number that comes after is the number of days. This can be useful if you want to see what files were updated or accessed recently.
