@@ -46,6 +46,7 @@ that are in the current directory.
 # option 2: -mindepth & -maxdepth
 
 1) -maxdepth 2
+2) 
 Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:510$ find -maxdepth 2
