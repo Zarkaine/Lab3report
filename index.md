@@ -3,6 +3,7 @@
 # option 1: -type
 
 -type d:
+Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:487$ find -type d
 ```
@@ -23,6 +24,19 @@ Output:
 ```
 
 -type f:
+too many files, so changed directory first
+Input:
+```
+[cs15lwi23asi@ieng6-202]:written_2:488$ cd ./non-fiction/OUP/Berk
+[cs15lwi23asi@ieng6-202]:Berk:492$ find -type f
+```
+Ouput:
+```
+./CH4.txt
+./ch1.txt
+./ch2.txt
+./ch7.txt
+```
 
 Using $ find -type d results in the terminal displaying a list of all directories that are in the current directory. 
 $ find -type f displays a list of all files in the current directory. This is useful because you can see all the subdirectories in the current directory. 
