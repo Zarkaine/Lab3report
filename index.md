@@ -38,15 +38,14 @@ Ouput:
 ./ch7.txt
 ```
 
-Using $ find -type d results in the terminal displaying a list of all directories that are in the current directory. 
-$ find -type f displays a list of all files in the current directory. This is useful because you can see all the subdirectories in the current directory. 
+Using "find -type d" results in the terminal displaying a list of all directories that are in the current directory. 
+"find -type f" displays a list of all files in the current directory. This is useful because you can see all the subdirectories in the current directory. 
 Or you can see all the files in the entire directory, including the files in the subdirectory. Calling ls -d or ls -f would only give you a list of files/directories
 that are in the current directory.
 
 # option 2: -mindepth & -maxdepth
 
 1) -maxdepth 2
-2) 
 Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:510$ find -maxdepth 2
