@@ -27,11 +27,13 @@ Output:
 2) type f:
 
 too many files, so changed directory first
+
 Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:488$ cd ./non-fiction/OUP/Berk
 [cs15lwi23asi@ieng6-202]:Berk:492$ find -type f
 ```
+
 Ouput:
 ```
 ./CH4.txt
@@ -53,6 +55,7 @@ Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:510$ find -maxdepth 2
 ```
+
 Output:
 ```
 .
@@ -64,13 +67,16 @@ Output:
 ./t.txt
 ./s.txt
 ```
+
 2) -mindepth 
 
 Too many files, so added -type d to only show directories. Using -mindepth 2 means that it will go down 2 levels before searching.
+
 Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:517$ find -mindepth 2 -type d
 ```
+
 Ouput:
 ```
 ./non-fiction/OUP
@@ -88,7 +94,7 @@ This is useful if you only want to search a certain number of sub directories. U
 subdirectory. But that can be a lot of files, like with written_2. If you only want to see the files in the first few levels, you would use this. For instance,
 in written_2, there are 227 files total. But in the first two levels, there are only 2 files (2 of which are not in the director by default, they are files I created). Or if you want to search in a certain range, you can use both -mindepth and -maxdepth to search a specific range of levels.
 
-# option 3: -size
+# Option 3: -size
 
 1) -size +100k:
 
@@ -96,6 +102,7 @@ Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:555$ find -size +100k
 ```
+
 Ouput:
 ```
 ./non-fiction/OUP/Berk/CH4.txt
@@ -116,6 +123,7 @@ Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:559$ find -size +75k -size -100k
 ```
+
 Ouput:
 ```
 ./non-fiction/OUP/Berk/ch1.txt
@@ -140,7 +148,7 @@ This option lets you search for files based on the size. + means that you want f
 If you want to search in a range, you need to call -size, and do the minimum first. This is useful because you can search a directory, 
 and all the subdirectories for files of a certain size. You need to include the units too, c for byte, k for kilobyte, M for megabyte, and G for gigabyte.
 
-# option 4: mtime, ctime, and ntime
+# Option 4: mtime, ctime, and ntime
 
 1) -mtime:
 
@@ -148,6 +156,7 @@ Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:533$ find -type f -mtime -1   
 ```
+
 Ouput:
 ```
 ./t.txt
@@ -162,6 +171,7 @@ Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:549$ find -type f -ctime -4 
 ```
+
 Ouput:
 ```
 ./t.txt
@@ -176,6 +186,7 @@ Input:
 ```
 [cs15lwi23asi@ieng6-202]:written_2:552$ find -type f -atime -4
 ```
+
 Ouput:
 ```
 ./t.txt
@@ -186,8 +197,6 @@ Ouput:
 
 These options allow you to search the directory for all files based on the last modification time (mtime), creation time (ctime), or the last time the 
 file was accessed (atime). The number that comes after is the number of days. This can be useful if you want to see what files were updated or accessed recently.
-
-
 
 # Sources used: 
 * For options 1, 2, and 4- [linuxhandbook.com](https://linuxhandbook.com/find-command-examples/)
