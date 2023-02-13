@@ -108,6 +108,6 @@ file was accessed (atime). The number that comes after is the number of days. Th
 
 
 
-$Source used: 
+# Sources used: 
 * For options 1, 2, and 4- [linuxhandbook.com](https://linuxhandbook.com/find-command-examples/)
 * For option 3L [geeksforgeeks.org](https://www.geeksforgeeks.org/mindepth-maxdepth-linux-find-command-limiting-search-specific-directory/)
